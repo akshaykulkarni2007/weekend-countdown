@@ -1,0 +1,44 @@
+.main-container {
+    height: 100vh;
+    width: 100%;
+    background-image: url("./background.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-header,
+.main-footer {
+    padding: 5rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.countdown-boxes {
+    padding: 5rem 0;
+}
+
+.countdown-boxes .countdown-box {
+    padding: 1em 2em;
+    border: 1px solid red;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.countdown-boxes .countdown-box span {
+    display: block;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
