@@ -1,6 +1,7 @@
 .main-container {
     height: 100vh;
     width: 100%;
+    overflow: hidden;
     background-image: url("./background.jpeg");
     background-position: center;
     background-size: cover;
@@ -26,7 +27,7 @@
 
 .countdown-boxes .countdown-box {
     padding: 1em 2em;
-    border: 1px solid red;
+    border: 1px solid #fff;
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;

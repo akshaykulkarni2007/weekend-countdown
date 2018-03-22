@@ -7,6 +7,7 @@ startWeekend.setDay(5);
 startWeekend.setHours(18, 00, 0);
 startWeekend = startWeekend.getTime();
 
+// if(new Date().getDay() == )
 let interval = setInterval(() => {
     const now = new Date().getTime();
     const difference = startWeekend - now;
@@ -21,6 +22,22 @@ let interval = setInterval(() => {
     $(".mins span").html(mins);
     $(".seconds span").html(seconds);
 
+    setStyles(days, hours);
+
 }, 1000);
+
+function setStyles(days,hours) {
+    if(days < 1) {
+        $(".days").css({
+            "background": "#48a70b",
+            "border": "1px solid #256f15"
+        });
+    } else if (days > 2 && hours>=12) {
+        $(".days").css({
+            "background": "#ed462f",
+            "border": "1px solid #c1272d"
+        });
+    }
+}
 
 $(".main-footer span").html(new Date(startWeekend));
