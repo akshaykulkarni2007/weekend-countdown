@@ -7,25 +7,28 @@ startWeekend.setDay(5);
 startWeekend.setHours(18, 00, 0);
 startWeekend = startWeekend.getTime();
 
-// if(new Date().getDay() == )
-let interval = setInterval(() => {
-    const now = new Date().getTime();
-    const difference = startWeekend - now;
+if((new Date().getDay() == 5 && new Date().getHours() < 18) || (new Date().getDay() >= 1 && new Date().getDay() <= 4)) {
+    let interval = setInterval(() => {
+        const now = new Date().getTime();
+        const difference = startWeekend - now;
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    $(".days span").html(days);
-    $(".hours span").html(hours);
-    $(".mins span").html(mins);
-    $(".seconds span").html(seconds);
+        $(".days span").html(days);
+        $(".hours span").html(hours);
+        $(".mins span").html(mins);
+        $(".seconds span").html(seconds);
 
-    setStyles(days, hours);
-
-}, 1000);
-
+        setStyles(days, hours);
+        
+    }, 1000);
+} else {
+    $(".countdown-boxes").html("<h1>IT'S THE WEEKEND</h1>");
+    $(".main-footer").hide();
+}
 function setStyles(days,hours) {
     if(days < 1) {
         $(".days").css({

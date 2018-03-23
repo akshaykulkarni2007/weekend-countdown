@@ -6,6 +6,7 @@
     background-position: center;
     background-size: cover;
     color: #fff;
+    text-align: center;
 }
 
 .overlay {
@@ -17,7 +18,6 @@
 .main-header,
 .main-footer {
     padding: 5rem 0;
-    text-align: center;
     text-transform: capitalize;
 }
 
@@ -28,7 +28,6 @@
 .countdown-boxes .countdown-box {
     padding: 1em 2em;
     border: 1px solid #fff;
-    text-align: center;
     font-size: 1.2em;
     font-weight: bold;
 }
